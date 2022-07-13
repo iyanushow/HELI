@@ -36,8 +36,6 @@ function App() {
     setFilteredTransaction(data);
   }, []);
 
-  console.log(isFiltered);
-
   return (
     <main className="px-2 md:px-20 py-8">
       <div className="max-w-screen-lg mx-auto">

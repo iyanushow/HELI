@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# HeliCarrier Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project submission for HeliCarrier. Live Preview can be found at [Heli App](https://iyanushow-lazerpay.netlify.app/)
+
+## Project Summary
+
+This submission is a Pokemon application that consumes the [Pokemon API](https://pokeapi.co) to provide basic browsing and discovering features for the user.
+
+### Technologies Used
+
+This project was built using:
+
+- [Nextjs](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
 
 ## Available Scripts
 
-In the project directory, you can run:
+To recreate this project:,
 
-### `npm start`
+- Clone the repository
+- CD into project folder
+- In project folder;
+
+### `yarn install`
+
+Run yarn install or npm install to downloads all required depencies and their correct versions.
+
+```bash
+yarn install
+# or
+npm install
+```
+
+### `yarn dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+yarn dev
+```
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Project satisfies the project requirements and user stories as mentioned below:
 
-### `npm run build`
+### Create PR for main codebase
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The major codebase exists on the dev branch and a Pull Request was made to the main branch as requested
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### List All Pokemons
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This lists all the pokemons in root page of application with their name and image
 
-### `npm run eject`
+### Show Details of Pokemon
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Each pokemon card has a button that links to its details page at [/pokemone/${name}]. This page shows various details about the selected pokemon
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Pagination
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Implemented pagination for the listing page to improve user experience and avoid expensive overhead and data transfer
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Text Search0
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Implemented a search bar to search through pokemons
+[//]: <> (Search funtionality is still work in progress.)
