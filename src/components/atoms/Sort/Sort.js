@@ -28,8 +28,6 @@ export default function Sort({
   }, [isFiltered, setData, transactions, filteredTransaction, sortType]);
 
   const updateSort = option => {
-    console.log(option.value);
-
     const filtered = data.filter(transaction => {
       if (sortType === "date") {
         return option.value

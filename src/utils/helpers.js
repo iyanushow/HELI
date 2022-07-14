@@ -30,7 +30,6 @@ export const generateYears = transactions => {
       years.push(year);
     }
   });
-  console.log(years.sort());
   return years.sort();
 };
 
