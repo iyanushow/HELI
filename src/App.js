@@ -11,6 +11,7 @@ import Search from "./components/molecules/Search/Search";
 import Transactions from "./components/molecules/Transactions/Transactions";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(false);
   const [transactions, setTransactions] = useState([]);
   const [filteredTransaction, setFilteredTransaction] = useState(transactions); //second state for immutable filtering and sort
   const [isFiltered, setIsFiltered] = useState({
@@ -21,11 +22,14 @@ function App() {
   });
 
   useEffect(() => {
+    setIsLoading(true);
     const fectchData = async () => {
-      const result = await client.query({
+      const { data, loading } = await client.query({
         query: GetUsers,
       });
-      setTransactions(result.data.transactions);
+
+      setTransactions(data.transactions);
+      setIsLoading(loading);
     };
 
     fectchData();
@@ -57,8 +61,11 @@ function App() {
               );
             })}
           </div>
-
-          <Transactions transactions={isFiltered ? filteredTransaction : transactions} />
+          {isLoading ? (
+            <h1 className="text-xl text-zinc-700 text-center my-10 uppercase ">Loading ...</h1>
+          ) : (
+            <Transactions transactions={isFiltered ? filteredTransaction : transactions} />
+          )}
         </>
       </div>
     </main>
